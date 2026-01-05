@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahar Cohen - Senior Full-Stack Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --accent: #c53030;
+            --text: #2d3748;
+            --text-light: #4a5568;
+            --border: #e2e8f0;
+            --bg-subtle: #f7fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            margin: 0;
+            size: A4;
+        }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.5;
+            color: var(--text);
+            background: white;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in 0.6in;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .contact a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .contact span::before {
+            content: "•";
+            margin-right: 0.5rem;
+            color: var(--accent);
+        }
+
+        .contact span:first-child::before {
+            display: none;
+        }
+
+        /* Summary */
+        .summary {
+            background: linear-gradient(135deg, var(--bg-subtle) 0%, white 100%);
+            border-left: 3px solid var(--accent);
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 1.25rem;
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.35rem;
+            margin-bottom: 0.85rem;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 1.5rem;
+        }
+
+        .job:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.15rem;
+        }
+
+        .company {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--primary);
+        }
+
+        .dates {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .role {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .achievements {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .achievements li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.3rem;
+            text-align: justify;
+            /* hyphens: auto; */
+        }
+
+        .achievements li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem 1.5rem;
+        }
+
+        .skill-category {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .skill-label {
+            font-weight: 700;
+            color: var(--primary);
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .skill-items {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .school {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .degree {
+            color: var(--text-light);
+            padding-left: 0.75rem;
+        }
+
+        /* Print optimizations */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .container {
+                padding: 0.4in 0.5in;
+            }
+
+            .summary {
+                background: var(--bg-subtle) !important;
+            }
+        }
+
+        /* Sub-role styling for Salesforce */
+        .sub-role {
+            /* margin-top: 0.6rem;
+            padding-top: 0.4rem; */
+            page-break-inside: avoid;
+        }
+
+        .sub-role .role {
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .sub-role .dates {
+            font-size: 0.85rem;
+        }
+
+        .sub-role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            /* margin-bottom: 0.2rem; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SAHAR COHEN</h1>
+            <div class="title">Senior Full-Stack Engineer</div>
+            <div class="contact">
+                <span>+972 525643902</span>
+                <span><a href="mailto:kermit2k@gmail.com">kermit2k@gmail.com</a></span>
+                <span>Israel</span>
+                <span><a href="https://linkedin.com/in/saharcohen">LinkedIn</a></span>
+                <span><a href="https://torpedo-solutions.onrender.com/">Website</a></span>
+            </div>
+        </header>
+
+        <div class="summary">
+            Senior Full-Stack Engineer with 5+ years building high-scale web applications serving millions of users. Expert at driving performance improvements, leading feature redesigns, and shipping customer-centric products. Recently architected and launched VendorHub, a production Shopify app automating vendor communications and order fulfillment. Strong background in React, TypeScript, Node.js, and cloud-native development with a proven ability to own features end-to-end from design to deployment.
+        </div>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Torpedo Solutions Inc</span>
+                    <span class="dates">Oct 2025 – Present</span>
+                </div>
+                <div class="role">Founder & Full-Stack Engineer</div>
+                <ul class="achievements">
+                    <li>Architected and launched <span class="highlight">VendorHub</span> (<a href="https://www.youtube.com/watch?v=Ws-vuGF0wOE">Video Guide</a>), a production Shopify app that automates vendor communication and order management for e-commerce stores, reducing manual vendor coordination time by 80%</li>
+                    <li>Built a complete full-stack application using <span class="highlight">React Router, TypeScript, Prisma ORM, PostgreSQL</span>, and <span class="highlight">Shopify Polaris</span> design system</li>
+                    <li>Implemented automated email notification system with <span class="highlight">SendGrid</span>, featuring vendor response tracking via unique tokenized URLs and one-time-use security tokens</li>
+                    <li>Developed <span class="highlight">auto-fulfillment engine</span> integrating with Shopify's Fulfillment API to automatically process vendor-confirmed orders</li>
+                    <li>Created a <span class="highlight">multi-tier reminder system</span> with configurable cron jobs for follow-up vendor communications</li>
+                    <li>Built <span class="highlight">URL scraping tool</span> with SSRF protection to extract product data (JSON-LD, Open Graph) for price and availability monitoring</li>
+                    <li>Implemented <span class="highlight">multi-tenant architecture</span> with shop-scoped data isolation and secure Shopify OAuth authentication</li>
+                    <li>Deployed on Render with <span class="highlight">webhook-driven architecture</span> handling order creation, app installation, and scope updates</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Salesforce</span>
+                    <span class="dates">Jan 2020 – May 2025</span>
+                </div>
+                
+                <div class="sub-role">
+                    <div class="sub-role-header">
+                        <span class="role">Senior Software Engineer</span>
+                        <span class="dates">Jan 2024 – May 2025</span>
+                    </div>
+                    <ul class="achievements">
+                        <li>Delivered <span class="highlight">~30% faster data load times</span> by implementing lazy loading and asynchronous processing, and reduced customer implementation issues by 18%, while enabling component reusability across multiple products</li>
+                        <li>Assumed full engineering leadership of a major feature redesign to address architectural limitations as the feature evolved into a full-scale product, while coordinating with product, design, and other cross-functional teams</li>
+                        <li>Enhanced application performance and reliability by optimizing API usage, strengthening error handling, and improving system observability</li>
+                        <li>Led Customer-Centric Engineer initiatives, directing incident triage for internal and external support</li>
+                    </ul>
+                </div>
+
+                <div class="sub-role">
+                    <div class="sub-role-header">
+                        <span class="role">Software Engineer</span>
+                        <span class="dates">Aug 2021 – Dec 2023</span>
+                    </div>
+                    <ul class="achievements">
+                        <li>Developed a large-scale mobile application serving over <span class="highlight">51K monthly active organizations</span> and <span class="highlight">1.5M+ end users</span></li>
+                        <li>Resolved high-priority (P1/P2) incidents more efficiently by collaborating with support and product teams, significantly reducing turnaround time and improving user satisfaction</li>
+                        <li>Increased sprint delivery success to <span class="highlight">90%</span> as acting Scrum Master by streamlining backlog grooming and cross-functional coordination</li>
+                    </ul>
+                </div>
+
+                <div class="sub-role">
+                    <div class="sub-role-header">
+                        <span class="role">Junior Software Engineer</span>
+                        <span class="dates">Jan 2020 – Aug 2021</span>
+                    </div>
+                    <ul class="achievements">
+                        <li>Proactively transitioned to a software development role following Salesforce's acquisition of ClickSoftware, independently upskilled to meet engineering demands</li>
+                        <li>Earned <span class="highlight">fast-track promotion</span> to Senior Engineer through consistent delivery, technical ownership, and cross-team contribution</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">ClickSoftware</span>
+                    <span class="dates">May 2019 – Dec 2019</span>
+                </div>
+                <div class="role">QA Engineer</div>
+                <ul class="achievements">
+                    <li>Developed automation tests for the location feature in the mobile app, ensuring reliability and reducing manual QA effort</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Tnuva</span>
+                    <span class="dates">Aug 2016 – Apr 2019</span>
+                </div>
+                <div class="role">Operational Excellence Engineer</div>
+                <ul class="achievements">
+                    <li>Drove process improvements that saved <span class="highlight">₪500K annually</span></li>
+                    <li>Increased scheduling efficiency by <span class="highlight">40%</span>, automating legacy planning processes with custom-built VBA tools</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <span class="skill-label">Frontend:</span>
+                    <span class="skill-items">JavaScript, TypeScript, React, React Router, Shopify Polaris, SLDS, HTML/CSS</span>
+                </div>
+                <div class="skill-category">
+                    <span class="skill-label">Backend:</span>
+                    <span class="skill-items">Node.js, TypeScript, Prisma ORM, PostgreSQL, REST APIs, Webhooks</span>
+                </div>
+                <div class="skill-category">
+                    <span class="skill-label">DevOps & Tools:</span>
+                    <span class="skill-items">Cursor, GitHub Copilot, Jenkins, GitHub Actions, Git, Docker, Render, Splunk, Observability Tools</span>
+                </div>
+                <div class="skill-category">
+                    <span class="skill-label">Practices:</span>
+                    <span class="skill-items">Incident Triage, Agile, Scrum, Technical Leadership, Code Reviews, System Design</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <span class="school">Ben-Gurion University of the Negev</span>
+                <div class="degree">B.Sc., Industrial Engineering and Management, 2017</div>
+                <div class="degree">B.Sc., Biology, 2013</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,12 @@
+{
+  "name": "job-search-2026",
+  "version": "1.0.0",
+  "main": "convert-to-pdf.js",
+  "scripts": {
+    "pdf": "node convert-to-pdf.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.0.0"
+  }
+}
+
