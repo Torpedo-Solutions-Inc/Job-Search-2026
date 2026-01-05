@@ -5,11 +5,11 @@ async function convertToPDF() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     
-    const htmlPath = path.resolve(__dirname, 'resume-beautiful.html');
+    const htmlPath = path.resolve(__dirname, 'index.html');
     await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });
     
     await page.pdf({
-        path: path.resolve(__dirname, 'resume-beautiful.pdf'),
+        path: path.resolve(__dirname, 'index.pdf'),
         format: 'A4',
         printBackground: true,
         margin: {
