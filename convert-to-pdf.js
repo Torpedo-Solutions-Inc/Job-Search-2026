@@ -21,7 +21,7 @@ async function convertToPDF() {
     });
     
     await browser.close();
-    console.log('PDF created successfully: resume-beautiful.pdf');
+    console.log('PDF created successfully: index.pdf');
 }
 
 convertToPDF().catch(console.error);
