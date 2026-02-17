@@ -4,29 +4,25 @@
 
 ---
 
-## Senior Full-Stack Engineer
+## Senior Software Engineer
 
 ---
 
 ### PROFESSIONAL SUMMARY
 
-Senior Full-Stack Engineer with 5+ years building high-scale web applications serving millions of users. Expert at driving performance improvements, leading feature redesigns, and shipping customer-centric products. Recently architected and launched VendorHub, a production Shopify app automating vendor communications and order fulfillment. Strong background in React, TypeScript, Node.js, and cloud-native development with a proven ability to own features end-to-end from design to deployment.
+Senior Software Engineer with 5+ years building high-scale web applications serving millions of users. Expert at driving performance improvements, leading feature redesigns, and shipping customer-centric products. Recently bootstrapped an independent software venture, owning everything from concept and architecture to production deployment and iteration. Strong background in React, TypeScript, Node.js, and cloud-native development with a proven ability to own features end-to-end from design to deployment.
 
 ---
 
 ### PROFESSIONAL EXPERIENCE
 
-**Torpedo Solutions Inc** | Oct 2025 – Present  
-**Founder & Full-Stack Engineer**
+**Self-Employed** | Oct 2025 – Present  
+**Self-Started Entrepreneur**
 
-- Architected and launched **VendorHub**, a production Shopify app that automates vendor communication and order management for e-commerce stores, reducing manual vendor coordination time by 80%
-- Built a complete full-stack application using **React Router, TypeScript, Prisma ORM, PostgreSQL**, and **Shopify Polaris** design system
-- Implemented automated email notification system with **SendGrid**, featuring vendor response tracking via unique tokenized URLs and one-time-use security tokens
-- Developed **auto-fulfillment engine** integrating with Shopify's Fulfillment API to automatically process vendor-confirmed orders
-- Created a **multi-tier reminder system** with configurable cron jobs for follow-up vendor communications
-- Built **URL scraping tool** with SSRF protection to extract product data (JSON-LD, Open Graph) for price and availability monitoring
-- Implemented **multi-tenant architecture** with shop-scoped data isolation and secure Shopify OAuth authentication
-- Deployed on Render with **webhook-driven architecture** handling order creation, app installation, and scope updates
+- Bootstrapped an independent software venture, taking an idea from concept to a production-ready web application with end-to-end ownership (product, design, engineering, and deployment)
+- Built and shipped the web application using AI-assisted development tools (Cursor, GitHub Copilot) to accelerate iteration while maintaining production-quality engineering practices
+- Worked with early users to iterate quickly, focusing on automation, reliability, and measurable operational impact
+- Published a production application and acquired paying customers, validating product-market fit through real revenue
 
 ---
 
